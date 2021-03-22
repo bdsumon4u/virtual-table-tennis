@@ -47,7 +47,8 @@ int main() {
             pLeft.score++;
         }
 
-        cout << pLeft.score << " == " << pRight.score << endl;
+        pLeft.scorePos(800 / 4, 600 / 10);
+        pRight.scorePos(3 * 800 / 4, 600 / 10);
 
         window.clear();
 

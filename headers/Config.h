@@ -16,6 +16,9 @@ using sf::Vector2;
 using sf::Vector2f;
 using sf::CircleShape;
 using sf::Keyboard;
+using sf::Font;
+using sf::Text;
+using sf::String;
 
 class Config {
 

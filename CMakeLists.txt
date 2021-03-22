@@ -13,3 +13,5 @@ if(SFML_FOUND)
     set(SFML_LIBS sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
     target_link_libraries(${PROJECT_NAME} ${SFML_LIBS})
 endif()
+
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
