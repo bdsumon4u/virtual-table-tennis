@@ -3,7 +3,7 @@ project(PingPong)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(${PROJECT_NAME} main.cpp Config.cpp Player.cpp)
+add_executable(${PROJECT_NAME} main.cpp Config.cpp Player.cpp Net.cpp Ball.cpp)
 
 include_directories(headers)
 set(SFML_DIR SFML/lib/cmake/SFML)

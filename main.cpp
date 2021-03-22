@@ -1,7 +1,7 @@
 #include "Config.h"
 #include "Player.h"
-
-void drawCircle(RenderWindow *window, int x, int y, int r, Color color = Color::White);
+#include "Net.h"
+#include "Ball.h"
 
 int main() {
     RenderWindow window(sf::VideoMode(800, 600), "Ping Pong");
@@ -9,6 +9,8 @@ int main() {
     window.setKeyRepeatEnabled(false);
 
     Player pLeft(10, 10), pRight(775, 490);
+    Net net(2, 10);
+    Ball ball(15);
 
     while (window.isOpen())
     {
@@ -40,18 +42,14 @@ int main() {
         }
 
         window.clear();
+
+        net.draw(&window);
         pLeft.draw(&window);
-        drawCircle(&window, 385, 285, 15);
+        ball.draw(&window);
         pRight.draw(&window);
+
         window.display();
     }
 
     return 0;
-}
-
-void drawCircle(RenderWindow *window, int x, int y, int r, Color color) {
-    CircleShape circle((float) r);
-    circle.setPosition(Vector2f(x, y));
-    circle.setFillColor(color);
-    window->draw(circle);
 }
