@@ -12,6 +12,7 @@ using sf::RenderWindow;
 using sf::Event;
 using sf::Color;
 using sf::RectangleShape;
+using sf::Vector2;
 using sf::Vector2f;
 using sf::CircleShape;
 using sf::Keyboard;

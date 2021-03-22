@@ -41,6 +41,14 @@ int main() {
             }
         }
 
+        if (ball.getPosition().x - 2 * ball.r < 800 / 2 - 1 && ball.move(&pLeft)) {
+            pRight.score++;
+        } else if (ball.getPosition().x > 800 / 2 - 1 && ball.move(&pRight)){
+            pLeft.score++;
+        }
+
+        cout << pLeft.score << " == " << pRight.score << endl;
+
         window.clear();
 
         net.draw(&window);

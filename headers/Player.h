@@ -6,10 +6,10 @@
 
 class Player {
 private:
-    int x, y, width = 15, height = 100, dir = 0, score = 0;
     Color color = Color::White;
     RectangleShape rect;
 public:
+    int x, y, width = 15, height = 100, dir = 0, score = 0;
     static const int UP = 1, DOWN = 2, NONE = 0;
     Player(int x, int y);
     void setSize(int w, int h);
