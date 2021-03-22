@@ -3,9 +3,10 @@ project(PingPong)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp Config.cpp Player.cpp)
 
-set(SFML_DIR "${CMAKE_SOURCE_DIR}/SFML/lib/cmake/SFML")
+include_directories(headers)
+set(SFML_DIR SFML/lib/cmake/SFML)
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 
 if(SFML_FOUND)
