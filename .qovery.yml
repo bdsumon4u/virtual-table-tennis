@@ -1,0 +1,15 @@
+application:
+  name: meilisearch
+  project: CHANGEME
+  organization: CHANGEME
+  storage:
+  - name: meili-data
+    type: ssd
+    size: 10GB
+    mount_point: /data.ms
+routers:
+- name: meili-router
+  routes:
+  - application_name: meilisearch
+    paths:
+    - "/"
